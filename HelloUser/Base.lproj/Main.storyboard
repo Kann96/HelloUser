@@ -34,10 +34,10 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="loginHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTo-1W-k9Q"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEQ-1o-QCT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkw-q9-HWl">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkw-q9-HWl">
                                         <rect key="frame" x="222.66666666666663" y="0.0" width="138.33333333333337" height="29.666666666666668"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -68,7 +68,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="passwordHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMO-pH-Qni"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUf-dC-qNu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -94,7 +94,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                         <connections>
-                                            <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rvF-do-aFI"/>
                                             <segue destination="eaB-TY-nfO" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="6eB-kd-5Oj"/>
                                         </connections>
                                     </button>

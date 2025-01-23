@@ -13,16 +13,29 @@ final class MainViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    var user = "User"
-    var passwordUser = "Password"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private var user = "User"
+    private var passwordUser = "Password"
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeUserVC = segue.destination as? WelcomeUserViewController else {return}
         welcomeUserVC.userNameWelcome = userName.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           super.touchesBegan(touches, with: event)
+           view.endEditing(true) // Это закроет клавиатуру
+       }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userName.text == user, password.text == passwordUser else {
+            showAlert(
+                withTitle: "Invalid login or password",
+                andMessage: "Please, enter correct login and password"
+            )
+            return false
+        }
+        // Введенное имя валидно, разрешаем переход
+        return true
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -31,29 +44,13 @@ final class MainViewController: UIViewController {
             self.password.text = ""
     }
     
-    @IBAction func loginHint() {
-        showAlert(withTitle: "Oops", andMessage: "Your login is User 😉")
-    }
-    @IBAction func passwordHint() {
-        showAlert(withTitle: "Oops", andMessage: "Your password is Password 😉")
-    }
     
-    @IBAction func logInButton() {
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(withTitle: "Oops", andMessage: "Your login is User 😉")
+        : showAlert(withTitle: "Oops", andMessage: "Your password is Password 😉")
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userName.text == user, password.text == passwordUser else {
-            showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
-            return false
-        }
-        // Введенное имя валидно, разрешаем переход
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           super.touchesBegan(touches, with: event)
-           view.endEditing(true) // Это закроет клавиатуру
-       }
+
     
 }
 
