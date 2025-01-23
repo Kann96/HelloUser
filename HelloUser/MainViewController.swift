@@ -25,6 +25,12 @@ final class MainViewController: UIViewController {
         welcomeUserVC.userNameWelcome = userName.text
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is WelcomeUserViewController else {return}
+            self.userName.text = ""
+            self.password.text = ""
+    }
+    
     @IBAction func loginHint() {
         showAlert(withTitle: "Oops", andMessage: "Your login is User 😉")
     }
@@ -48,8 +54,6 @@ final class MainViewController: UIViewController {
            super.touchesBegan(touches, with: event)
            view.endEditing(true) // Это закроет клавиатуру
        }
-
-    
     
 }
 
