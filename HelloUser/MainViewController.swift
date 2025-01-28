@@ -13,12 +13,12 @@ final class MainViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    private var user = "User"
-    private var passwordUser = "Password"
+    private let user = "User"
+    private let passwordUser = "Password"
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeUserVC = segue.destination as? WelcomeUserViewController else {return}
-        welcomeUserVC.userNameWelcome = userName.text
+        welcomeUserVC.userNameWelcome = userName.text ?? ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
