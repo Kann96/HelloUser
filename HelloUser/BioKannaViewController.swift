@@ -1,13 +1,13 @@
 //
-//  KannaViewController.swift
+//  BioKannaViewController.swift
 //  HelloUser
 //
-//  Created by Анастасия Кучер on 11.02.2025.
+//  Created by Анастасия Кучер on 16.02.2025.
 //
 
 import UIKit
 
-class KannaViewController: UIViewController {
+class BioKannaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

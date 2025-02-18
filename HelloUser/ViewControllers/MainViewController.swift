@@ -17,8 +17,8 @@ final class MainViewController: UIViewController {
     private let passwordUser = "Password"
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeUserVC = segue.destination as? WelcomeUserViewController else {return}
-        welcomeUserVC.userNameWelcome = userName.text ?? ""
+        guard let _ = segue.destination as? TabBarViewController else { return }
+         UserData.shared.userNameWelcome = userName.text ?? ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
