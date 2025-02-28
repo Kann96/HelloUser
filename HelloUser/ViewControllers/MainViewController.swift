@@ -13,8 +13,8 @@ final class MainViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    private let user = "User"
-    private let passwordUser = "Password"
+    private let user = userInfoLabel.user
+    private let passwordUser = userInfoLabel.passwordUser
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let _ = segue.destination as? TabBarViewController else { return }

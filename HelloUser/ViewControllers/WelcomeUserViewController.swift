@@ -16,7 +16,7 @@ final class WelcomeUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground(colors: [UIColor.red, UIColor.blue], direction: .vertical)
-        welcomeLabel.text = "Welcome, \(UserData.shared.userNameWelcome)! 👋"
+        welcomeLabel.text = "Welcome, \(userInfoLabel.person.name)! 👋"
     }
     
 

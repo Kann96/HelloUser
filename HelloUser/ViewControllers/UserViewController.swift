@@ -13,3 +13,4 @@ class UserData {
     private init() {}
 }
 
+let userInfoLabel = User.getUser()

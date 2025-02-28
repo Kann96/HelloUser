@@ -14,7 +14,7 @@
 		2F5C35E22D327F280093FA3C /* Exceptions for "HelloUser" folder in "HelloUser" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 2F5C35CF2D327F260093FA3C /* HelloUser */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6X6C72M663;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HelloUser/Info.plist;
+				INFOPLIST_FILE = HelloUser/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -179,7 +179,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6X6C72M663;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HelloUser/Info.plist;
+				INFOPLIST_FILE = HelloUser/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
